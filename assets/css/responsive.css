@@ -1,0 +1,127 @@
+/* ============================================
+   Responsive Stylesheet
+   ============================================ */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        padding: 40px 15px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .publication-links {
+        flex-wrap: wrap;
+    }
+
+    .awards-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.6em;
+    }
+
+    .header .title {
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    .research-tag {
+        font-size: 0.85em;
+        padding: 6px 14px;
+    }
+
+    .timeline-item {
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item::before {
+        left: -6px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .publication-item {
+        padding: 15px;
+    }
+
+    .publication-title {
+        font-size: 1em;
+    }
+
+    .publication-authors,
+    .publication-venue {
+        font-size: 0.85em;
+    }
+}
+
+/* Large Screen Styles */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .section {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+        break-inside: avoid;
+    }
+
+    .header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .publication-links {
+        display: none;
+    }
+}

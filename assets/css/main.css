@@ -1,0 +1,363 @@
+/* ============================================
+   Main Stylesheet - Academic Homepage
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --primary-color: #667eea;
+    --primary-dark: #5a67d8;
+    --secondary-color: #764ba2;
+    --text-color: #333;
+    --text-light: #666;
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+    --radius: 10px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header .title {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.header .affiliation {
+    opacity: 0.8;
+}
+
+/* Section Styles */
+.section {
+    background: var(--card-bg);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.section:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 1.5em;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1em;
+    margin: 20px 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Contact Styles */
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-item {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item:hover {
+    background: #e9ecef;
+}
+
+/* Research Tags */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.research-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: var(--transition);
+}
+
+.research-tag:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+    padding-left: 25px;
+    border-left: 3px solid var(--primary-color);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+.timeline-title {
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.timeline-institution {
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.timeline-description {
+    color: var(--text-light);
+    font-size: 0.95em;
+}
+
+/* Publication Styles */
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.publication-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.publication-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.publication-title {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.publication-authors {
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.publication-authors .highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.publication-venue {
+    color: var(--primary-color);
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.publication-links {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85em;
+}
+
+.publication-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Awards List */
+.awards-list {
+    list-style: none;
+}
+
+.awards-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.awards-list li:last-child {
+    border-bottom: none;
+}
+
+.award-name {
+    font-weight: 600;
+}
+
+.award-source {
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+.award-year {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Service Lists */
+.service-category {
+    margin-bottom: 20px;
+}
+
+.service-category h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.service-list li {
+    padding: 5px 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 15px;
+}
+
+.service-list li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-light);
+    font-size: 0.9em;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-light);
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
